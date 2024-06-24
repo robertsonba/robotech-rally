@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Robot Command</title>
+        <style type="text/css">
+            td {
+                text-align: center;
+            }
+            .outerTable {
+                width: 100%;
+            }
+            .titleTd {
+                text-align:center
+            }
+            .titleTd h1 {
+                margin: 0;
+                position: relative;
+            }
+            h1.RedCar {
+                color: red;
+            }
+            h1.BlueCar {
+                color: blue;
+            }
+            h1.GreenCar {
+                color: green;
+            }
+            .controlsRow > td {
+                width: 50%;
+            }
+            .raceButton input {
+                height:160px; 
+                width:160px; 
+                background-color:#54e754;
+            }
+            .CarColor {
+                display: inline-block;
+                position: relative;
+                bottom: -5px;
+                margin-left: 20px;
+                height: 1em;
+                width: 1em;
+            }
+            .RedCar .CarColor {
+                background-color: red;
+            }
+            .BlueCar .CarColor {
+                background-color: blue;
+            }
+            .GreenCar .CarColor {
+                background-color: green;
+            }
+        </style>
+    </head>
+    <body>
+        <table class="outerTable">
+            <tr>
+                <td colspan="2" class="titleTd">
+                    <h1 class="RedCar">Car #1<span class="CarColor"></span></h1>
+                </td>
+            </tr>
+            <tr class="controlsRow">
+                <td>
+                    <table class="controlsTable">
+                        <tr>
+                            <td colspan="3">
+                                <form action="./forward">
+                                    <input type="submit" value="Forward" style="height:120px; width:120px" />
+                                </form>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <form action="./left">
+                                    <input type="submit" value="Left" style="height:120px; width:120px" />
+                                </form>
+                            </td>
+                            <td>
+                                <form action="./stop">
+                                    <input type="submit" value="Stop" style="height:120px; width:120px" />
+                                </form>
+                            </td>
+                            <td>
+                                <form action="./right">
+                                    <input type="submit" value="Right" style="height:120px; width:120px" />
+                                </form>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td colspan="3">
+                                <form action="./reverse">
+                                    <input type="submit" value="Back" style="height:120px; width:120px" />
+                                </form>
+                            </td>
+                        </tr>
+                    </table>
+                </td>
+                <td class="raceButton">
+                    <form action="./race">
+                        <input type="submit" value="Start Race" />
+                    </form>
+                </td>
+            </tr>
+        </table>
+    </body>
+</html>
